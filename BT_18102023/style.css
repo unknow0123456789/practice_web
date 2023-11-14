@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 24px;
+}
+/* Header */
+header {
+    display: block;
+    text-align: right;
+}
+
+header h1 {
+    color: #4CAF50;
+}
+
+header div {
+    margin-top: 8px;
+}
+
+/* Navigation */
+#nav {
+    margin-top: 16px;
+}
+#nav > li {
+    display: inline-block;
+    background-color: #555555;
+    margin-right: 4px;
+    padding: 2px 36px;
+}
+#nav > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#nav > li:hover {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Content */
+#content {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    display: flex;
+}
+
+/* Left Content */
+.left-content {
+    width: 100vh;
+    background-color: #F0F0F0;
+    padding: 16px 16px;
+}
+
+.left-content > img {
+    width: 100%;
+    display: block;
+}
+
+.left-content h3 {
+    margin: 16px 0px 0px;
+    text-transform: uppercase;
+    color: #4CAF50;
+}
+
+.left-content h4 {
+    margin: 8px 0px 0px;
+}
+.left-content .info {
+    font-size: 15px;
+    margin: 8px 0px 0px;
+}
+.left-content .info-title{
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    width: 80px;
+}
+
+.left-content .info-content{
+    font-weight: normal;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.left-content .intro {
+    border: 1px solid #B4B4B3;
+    padding: 4px 16px 24px;
+    margin: 16px 0px;
+
+}
+
+.left-content .intro h4 {
+    text-transform: uppercase;
+    margin: 16px 0px;
+}
+
+.left-content .intro ul {
+    margin: 0px 32px 16px;
+}
+
+.left-content .intro ul li {
+    font-weight: bold;
+}
+
+.left-content .intro ul li a {
+    font-weight: normal;
+    color: #000000;
+    margin-left: 4px;
+}
+
+/* Right Content */
+.right-content {
+    width: 100%;
+    margin-left: 16px;
+}
+
+.right-content h3 {
+    padding: 16px 0px;
+    color: #4CAF50;
+}
+
+.right-content .target {
+    margin-bottom: 48px;
+}
+
+.right-content h4 {
+    padding: 0px 0px 16px;
+}
+
+.right-content .score {
+    padding: 0px 0px 16px;
+}
+
+.right-content .graduate {
+    padding: 0px 0px 58px;
+}
+
+.right-content table {
+    width: 100%;
+}
+
+.right-content table th {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    padding: 8px;
+}
+
+.right-content table td {
+    border: 1px solid #F0F0F0;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    font-size: small;
+    text-align: center;
+    margin-top: 16px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .left-content{
+        width: 25vw;
+    }
+    .right-content{
+        width: 75vw;
+    }
+    header{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #nav > li{
+        text-align: center;
+        width: 175px;
+        height: 30px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header{
+        text-align: center;
+        margin: 80px;
+    }
+    ul{
+        text-align: center;
+    }
+    #nav > li{
+        width: 44vw;
+        height: 4vw;
+        margin: 0.7vw;
+    }
+    .left-content{
+        width: 50vw;
+    }
+    .right-content{
+        width: 50vw;
+    }
+    
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    tr th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    #content td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 30%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    /*
+Label the data
+*/
+    td:nth-of-type(1):before {
+        content: "Vị trí";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Đơn vị";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Thời gian";
+    }
+    
+}
