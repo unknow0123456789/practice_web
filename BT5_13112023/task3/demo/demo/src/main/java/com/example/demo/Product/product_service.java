@@ -21,6 +21,7 @@ public class product_service {
 	{
 		return product_repository.findAll();
 	}
+	
 	public void addProduct(product newproduct)
 	{
 		product_repository.save(newproduct);

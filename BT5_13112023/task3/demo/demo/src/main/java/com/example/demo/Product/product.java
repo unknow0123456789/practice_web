@@ -17,10 +17,10 @@ public class product {
         sequenceName ="product_sequence",
         allocationSize = 1
     )
-    @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
-        generator = "product_sequence"
-    )
+    // @GeneratedValue(
+    //     strategy = GenerationType.NONE,
+    //     generator = "product_sequence"
+    // )
 
     private int id;
     private String name;
